@@ -1,0 +1,400 @@
+[0m[1maws_vpc.main: Refreshing state... [id=vpc-088ea64a0e552c708][0m
+[0m[1maws_eip.lb: Refreshing state... [id=eipalloc-02f1296622ea66504][0m
+[0m[1maws_subnet.private_2: Refreshing state... [id=subnet-0562257e8f42c1bbb][0m
+[0m[1maws_subnet.private_1: Refreshing state... [id=subnet-0bf0f1ae11e5fe8e7][0m
+[0m[1maws_subnet.private_3: Refreshing state... [id=subnet-0500d3daa7cd52c96][0m
+[0m[1maws_subnet.private_4: Refreshing state... [id=subnet-0bb40dc44737d7e07][0m
+[0m[1maws_route_table.private_route_table: Refreshing state... [id=rtb-0f58f5fbb6d2bab18][0m
+[0m[1maws_subnet.public_2: Refreshing state... [id=subnet-030e2027b08d24e85][0m
+[0m[1maws_internet_gateway.igw: Refreshing state... [id=igw-046674e7c0b5f5f93][0m
+[0m[1maws_subnet.public_1: Refreshing state... [id=subnet-0e9ff122f7c7bef55][0m
+[0m[1maws_route_table.public_route_table: Refreshing state... [id=rtb-0690598ed7ebefd21][0m
+[0m[1maws_route_table_association.a_private4: Refreshing state... [id=rtbassoc-00463a91101ec0ebd][0m
+[0m[1maws_nat_gateway.ngw: Refreshing state... [id=nat-0060a7786d58c7fb5][0m
+[0m[1maws_route_table_association.a_private2: Refreshing state... [id=rtbassoc-00f7d24a1197fe32e][0m
+[0m[1maws_route_table_association.a_public1: Refreshing state... [id=rtbassoc-070e3c14711fea70b][0m
+[0m[1maws_route_table_association.a_public2: Refreshing state... [id=rtbassoc-07a44bb9504ece759][0m
+[0m[1maws_route_table.nat_route_table: Refreshing state... [id=rtb-066ef9c602d390f4b][0m
+[0m[1maws_route_table_association.a_private1: Refreshing state... [id=rtbassoc-03a2bfe07a24abcd2][0m
+[0m[1maws_route_table_association.a_private3: Refreshing state... [id=rtbassoc-04b4de496fcc673b2][0m
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  [31m-[0m destroy
+[0m
+Terraform will perform the following actions:
+
+[1m  # aws_eip.lb[0m will be [1m[31mdestroyed[0m[0m
+[0m  [31m-[0m[0m resource "aws_eip" "lb" {
+      [31m-[0m [0m[1m[0mallocation_id[0m[0m        = "eipalloc-02f1296622ea66504" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0massociation_id[0m[0m       = "eipassoc-049c1a5ed8b1fb209" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mdomain[0m[0m               = "vpc" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mid[0m[0m                   = "eipalloc-02f1296622ea66504" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mnetwork_border_group[0m[0m = "eu-west-1" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mnetwork_interface[0m[0m    = "eni-011bd5750d43865b4" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mprivate_dns[0m[0m          = "ip-10-0-1-206.eu-west-1.compute.internal" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mprivate_ip[0m[0m           = "10.0.1.206" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mpublic_dns[0m[0m           = "ec2-52-212-233-139.eu-west-1.compute.amazonaws.com" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mpublic_ip[0m[0m            = "52.212.233.139" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mpublic_ipv4_pool[0m[0m     = "amazon" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mtags[0m[0m                 = {} [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mtags_all[0m[0m             = {} [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mvpc[0m[0m                  = true [90m->[0m [0m[90mnull[0m[0m
+    }
+
+[1m  # aws_internet_gateway.igw[0m will be [1m[31mdestroyed[0m[0m
+[0m  [31m-[0m[0m resource "aws_internet_gateway" "igw" {
+      [31m-[0m [0m[1m[0marn[0m[0m      = "arn:aws:ec2:eu-west-1:566083893252:internet-gateway/igw-046674e7c0b5f5f93" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mid[0m[0m       = "igw-046674e7c0b5f5f93" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mowner_id[0m[0m = "566083893252" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mtags[0m[0m     = {
+          [31m-[0m [0m"Name" = "internet-gateway"
+        } [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mtags_all[0m[0m = {
+          [31m-[0m [0m"Name" = "internet-gateway"
+        } [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mvpc_id[0m[0m   = "vpc-088ea64a0e552c708" [90m->[0m [0m[90mnull[0m[0m
+    }
+
+[1m  # aws_nat_gateway.ngw[0m will be [1m[31mdestroyed[0m[0m
+[0m  [31m-[0m[0m resource "aws_nat_gateway" "ngw" {
+      [31m-[0m [0m[1m[0mallocation_id[0m[0m        = "eipalloc-02f1296622ea66504" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mconnectivity_type[0m[0m    = "public" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mid[0m[0m                   = "nat-0060a7786d58c7fb5" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mnetwork_interface_id[0m[0m = "eni-011bd5750d43865b4" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mprivate_ip[0m[0m           = "10.0.1.206" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mpublic_ip[0m[0m            = "52.212.233.139" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0msubnet_id[0m[0m            = "subnet-0e9ff122f7c7bef55" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mtags[0m[0m                 = {
+          [31m-[0m [0m"Name" = "NatGateWay"
+        } [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mtags_all[0m[0m             = {
+          [31m-[0m [0m"Name" = "NatGateWay"
+        } [90m->[0m [0m[90mnull[0m[0m
+    }
+
+[1m  # aws_route_table.nat_route_table[0m will be [1m[31mdestroyed[0m[0m
+[0m  [31m-[0m[0m resource "aws_route_table" "nat_route_table" {
+      [31m-[0m [0m[1m[0marn[0m[0m              = "arn:aws:ec2:eu-west-1:566083893252:route-table/rtb-066ef9c602d390f4b" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mid[0m[0m               = "rtb-066ef9c602d390f4b" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mowner_id[0m[0m         = "566083893252" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mpropagating_vgws[0m[0m = [] [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mroute[0m[0m            = [
+          [31m-[0m [0m{
+              [31m-[0m [0mcarrier_gateway_id         = ""
+              [31m-[0m [0mcidr_block                 = "0.0.0.0/0"
+              [31m-[0m [0mdestination_prefix_list_id = ""
+              [31m-[0m [0megress_only_gateway_id     = ""
+              [31m-[0m [0mgateway_id                 = ""
+              [31m-[0m [0minstance_id                = ""
+              [31m-[0m [0mipv6_cidr_block            = ""
+              [31m-[0m [0mlocal_gateway_id           = ""
+              [31m-[0m [0mnat_gateway_id             = "nat-0060a7786d58c7fb5"
+              [31m-[0m [0mnetwork_interface_id       = ""
+              [31m-[0m [0mtransit_gateway_id         = ""
+              [31m-[0m [0mvpc_endpoint_id            = ""
+              [31m-[0m [0mvpc_peering_connection_id  = ""
+            },
+        ] [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mtags[0m[0m             = {
+          [31m-[0m [0m"Name" = "NGW-Route-Table"
+        } [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mtags_all[0m[0m         = {
+          [31m-[0m [0m"Name" = "NGW-Route-Table"
+        } [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mvpc_id[0m[0m           = "vpc-088ea64a0e552c708" [90m->[0m [0m[90mnull[0m[0m
+    }
+
+[1m  # aws_route_table.private_route_table[0m will be [1m[31mdestroyed[0m[0m
+[0m  [31m-[0m[0m resource "aws_route_table" "private_route_table" {
+      [31m-[0m [0m[1m[0marn[0m[0m              = "arn:aws:ec2:eu-west-1:566083893252:route-table/rtb-0f58f5fbb6d2bab18" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mid[0m[0m               = "rtb-0f58f5fbb6d2bab18" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mowner_id[0m[0m         = "566083893252" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mpropagating_vgws[0m[0m = [] [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mroute[0m[0m            = [] [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mtags[0m[0m             = {
+          [31m-[0m [0m"Name" = "privateRouteTable"
+        } [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mtags_all[0m[0m         = {
+          [31m-[0m [0m"Name" = "privateRouteTable"
+        } [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mvpc_id[0m[0m           = "vpc-088ea64a0e552c708" [90m->[0m [0m[90mnull[0m[0m
+    }
+
+[1m  # aws_route_table.public_route_table[0m will be [1m[31mdestroyed[0m[0m
+[0m  [31m-[0m[0m resource "aws_route_table" "public_route_table" {
+      [31m-[0m [0m[1m[0marn[0m[0m              = "arn:aws:ec2:eu-west-1:566083893252:route-table/rtb-0690598ed7ebefd21" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mid[0m[0m               = "rtb-0690598ed7ebefd21" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mowner_id[0m[0m         = "566083893252" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mpropagating_vgws[0m[0m = [] [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mroute[0m[0m            = [
+          [31m-[0m [0m{
+              [31m-[0m [0mcarrier_gateway_id         = ""
+              [31m-[0m [0mcidr_block                 = "0.0.0.0/0"
+              [31m-[0m [0mdestination_prefix_list_id = ""
+              [31m-[0m [0megress_only_gateway_id     = ""
+              [31m-[0m [0mgateway_id                 = "igw-046674e7c0b5f5f93"
+              [31m-[0m [0minstance_id                = ""
+              [31m-[0m [0mipv6_cidr_block            = ""
+              [31m-[0m [0mlocal_gateway_id           = ""
+              [31m-[0m [0mnat_gateway_id             = ""
+              [31m-[0m [0mnetwork_interface_id       = ""
+              [31m-[0m [0mtransit_gateway_id         = ""
+              [31m-[0m [0mvpc_endpoint_id            = ""
+              [31m-[0m [0mvpc_peering_connection_id  = ""
+            },
+        ] [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mtags[0m[0m             = {
+          [31m-[0m [0m"Name" = "publicRouteTable"
+        } [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mtags_all[0m[0m         = {
+          [31m-[0m [0m"Name" = "publicRouteTable"
+        } [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mvpc_id[0m[0m           = "vpc-088ea64a0e552c708" [90m->[0m [0m[90mnull[0m[0m
+    }
+
+[1m  # aws_route_table_association.a_private1[0m will be [1m[31mdestroyed[0m[0m
+[0m  [31m-[0m[0m resource "aws_route_table_association" "a_private1" {
+      [31m-[0m [0m[1m[0mid[0m[0m             = "rtbassoc-03a2bfe07a24abcd2" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mroute_table_id[0m[0m = "rtb-066ef9c602d390f4b" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0msubnet_id[0m[0m      = "subnet-0bf0f1ae11e5fe8e7" [90m->[0m [0m[90mnull[0m[0m
+    }
+
+[1m  # aws_route_table_association.a_private2[0m will be [1m[31mdestroyed[0m[0m
+[0m  [31m-[0m[0m resource "aws_route_table_association" "a_private2" {
+      [31m-[0m [0m[1m[0mid[0m[0m             = "rtbassoc-00f7d24a1197fe32e" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mroute_table_id[0m[0m = "rtb-0f58f5fbb6d2bab18" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0msubnet_id[0m[0m      = "subnet-0562257e8f42c1bbb" [90m->[0m [0m[90mnull[0m[0m
+    }
+
+[1m  # aws_route_table_association.a_private3[0m will be [1m[31mdestroyed[0m[0m
+[0m  [31m-[0m[0m resource "aws_route_table_association" "a_private3" {
+      [31m-[0m [0m[1m[0mid[0m[0m             = "rtbassoc-04b4de496fcc673b2" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mroute_table_id[0m[0m = "rtb-066ef9c602d390f4b" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0msubnet_id[0m[0m      = "subnet-0500d3daa7cd52c96" [90m->[0m [0m[90mnull[0m[0m
+    }
+
+[1m  # aws_route_table_association.a_private4[0m will be [1m[31mdestroyed[0m[0m
+[0m  [31m-[0m[0m resource "aws_route_table_association" "a_private4" {
+      [31m-[0m [0m[1m[0mid[0m[0m             = "rtbassoc-00463a91101ec0ebd" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mroute_table_id[0m[0m = "rtb-0f58f5fbb6d2bab18" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0msubnet_id[0m[0m      = "subnet-0bb40dc44737d7e07" [90m->[0m [0m[90mnull[0m[0m
+    }
+
+[1m  # aws_route_table_association.a_public1[0m will be [1m[31mdestroyed[0m[0m
+[0m  [31m-[0m[0m resource "aws_route_table_association" "a_public1" {
+      [31m-[0m [0m[1m[0mid[0m[0m             = "rtbassoc-070e3c14711fea70b" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mroute_table_id[0m[0m = "rtb-0690598ed7ebefd21" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0msubnet_id[0m[0m      = "subnet-0e9ff122f7c7bef55" [90m->[0m [0m[90mnull[0m[0m
+    }
+
+[1m  # aws_route_table_association.a_public2[0m will be [1m[31mdestroyed[0m[0m
+[0m  [31m-[0m[0m resource "aws_route_table_association" "a_public2" {
+      [31m-[0m [0m[1m[0mid[0m[0m             = "rtbassoc-07a44bb9504ece759" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mroute_table_id[0m[0m = "rtb-0690598ed7ebefd21" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0msubnet_id[0m[0m      = "subnet-030e2027b08d24e85" [90m->[0m [0m[90mnull[0m[0m
+    }
+
+[1m  # aws_subnet.private_1[0m will be [1m[31mdestroyed[0m[0m
+[0m  [31m-[0m[0m resource "aws_subnet" "private_1" {
+      [31m-[0m [0m[1m[0marn[0m[0m                             = "arn:aws:ec2:eu-west-1:566083893252:subnet/subnet-0bf0f1ae11e5fe8e7" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0massign_ipv6_address_on_creation[0m[0m = false [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mavailability_zone[0m[0m               = "eu-west-1a" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mavailability_zone_id[0m[0m            = "euw1-az2" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mcidr_block[0m[0m                      = "10.0.2.0/24" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mid[0m[0m                              = "subnet-0bf0f1ae11e5fe8e7" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mmap_customer_owned_ip_on_launch[0m[0m = false [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mmap_public_ip_on_launch[0m[0m         = false [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mowner_id[0m[0m                        = "566083893252" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mtags[0m[0m                            = {
+          [31m-[0m [0m"Name" = "Private-1"
+        } [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mtags_all[0m[0m                        = {
+          [31m-[0m [0m"Name" = "Private-1"
+        } [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mvpc_id[0m[0m                          = "vpc-088ea64a0e552c708" [90m->[0m [0m[90mnull[0m[0m
+    }
+
+[1m  # aws_subnet.private_2[0m will be [1m[31mdestroyed[0m[0m
+[0m  [31m-[0m[0m resource "aws_subnet" "private_2" {
+      [31m-[0m [0m[1m[0marn[0m[0m                             = "arn:aws:ec2:eu-west-1:566083893252:subnet/subnet-0562257e8f42c1bbb" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0massign_ipv6_address_on_creation[0m[0m = false [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mavailability_zone[0m[0m               = "eu-west-1a" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mavailability_zone_id[0m[0m            = "euw1-az2" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mcidr_block[0m[0m                      = "10.0.3.0/24" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mid[0m[0m                              = "subnet-0562257e8f42c1bbb" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mmap_customer_owned_ip_on_launch[0m[0m = false [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mmap_public_ip_on_launch[0m[0m         = false [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mowner_id[0m[0m                        = "566083893252" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mtags[0m[0m                            = {
+          [31m-[0m [0m"Name" = "Private-2"
+        } [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mtags_all[0m[0m                        = {
+          [31m-[0m [0m"Name" = "Private-2"
+        } [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mvpc_id[0m[0m                          = "vpc-088ea64a0e552c708" [90m->[0m [0m[90mnull[0m[0m
+    }
+
+[1m  # aws_subnet.private_3[0m will be [1m[31mdestroyed[0m[0m
+[0m  [31m-[0m[0m resource "aws_subnet" "private_3" {
+      [31m-[0m [0m[1m[0marn[0m[0m                             = "arn:aws:ec2:eu-west-1:566083893252:subnet/subnet-0500d3daa7cd52c96" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0massign_ipv6_address_on_creation[0m[0m = false [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mavailability_zone[0m[0m               = "eu-west-1b" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mavailability_zone_id[0m[0m            = "euw1-az3" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mcidr_block[0m[0m                      = "10.0.5.0/24" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mid[0m[0m                              = "subnet-0500d3daa7cd52c96" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mmap_customer_owned_ip_on_launch[0m[0m = false [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mmap_public_ip_on_launch[0m[0m         = false [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mowner_id[0m[0m                        = "566083893252" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mtags[0m[0m                            = {
+          [31m-[0m [0m"Name" = "Private-3"
+        } [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mtags_all[0m[0m                        = {
+          [31m-[0m [0m"Name" = "Private-3"
+        } [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mvpc_id[0m[0m                          = "vpc-088ea64a0e552c708" [90m->[0m [0m[90mnull[0m[0m
+    }
+
+[1m  # aws_subnet.private_4[0m will be [1m[31mdestroyed[0m[0m
+[0m  [31m-[0m[0m resource "aws_subnet" "private_4" {
+      [31m-[0m [0m[1m[0marn[0m[0m                             = "arn:aws:ec2:eu-west-1:566083893252:subnet/subnet-0bb40dc44737d7e07" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0massign_ipv6_address_on_creation[0m[0m = false [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mavailability_zone[0m[0m               = "eu-west-1b" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mavailability_zone_id[0m[0m            = "euw1-az3" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mcidr_block[0m[0m                      = "10.0.6.0/24" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mid[0m[0m                              = "subnet-0bb40dc44737d7e07" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mmap_customer_owned_ip_on_launch[0m[0m = false [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mmap_public_ip_on_launch[0m[0m         = false [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mowner_id[0m[0m                        = "566083893252" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mtags[0m[0m                            = {
+          [31m-[0m [0m"Name" = "Private-4"
+        } [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mtags_all[0m[0m                        = {
+          [31m-[0m [0m"Name" = "Private-4"
+        } [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mvpc_id[0m[0m                          = "vpc-088ea64a0e552c708" [90m->[0m [0m[90mnull[0m[0m
+    }
+
+[1m  # aws_subnet.public_1[0m will be [1m[31mdestroyed[0m[0m
+[0m  [31m-[0m[0m resource "aws_subnet" "public_1" {
+      [31m-[0m [0m[1m[0marn[0m[0m                             = "arn:aws:ec2:eu-west-1:566083893252:subnet/subnet-0e9ff122f7c7bef55" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0massign_ipv6_address_on_creation[0m[0m = false [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mavailability_zone[0m[0m               = "eu-west-1a" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mavailability_zone_id[0m[0m            = "euw1-az2" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mcidr_block[0m[0m                      = "10.0.1.0/24" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mid[0m[0m                              = "subnet-0e9ff122f7c7bef55" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mmap_customer_owned_ip_on_launch[0m[0m = false [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mmap_public_ip_on_launch[0m[0m         = false [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mowner_id[0m[0m                        = "566083893252" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mtags[0m[0m                            = {
+          [31m-[0m [0m"Name" = "Public-1"
+        } [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mtags_all[0m[0m                        = {
+          [31m-[0m [0m"Name" = "Public-1"
+        } [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mvpc_id[0m[0m                          = "vpc-088ea64a0e552c708" [90m->[0m [0m[90mnull[0m[0m
+    }
+
+[1m  # aws_subnet.public_2[0m will be [1m[31mdestroyed[0m[0m
+[0m  [31m-[0m[0m resource "aws_subnet" "public_2" {
+      [31m-[0m [0m[1m[0marn[0m[0m                             = "arn:aws:ec2:eu-west-1:566083893252:subnet/subnet-030e2027b08d24e85" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0massign_ipv6_address_on_creation[0m[0m = false [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mavailability_zone[0m[0m               = "eu-west-1b" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mavailability_zone_id[0m[0m            = "euw1-az3" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mcidr_block[0m[0m                      = "10.0.4.0/24" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mid[0m[0m                              = "subnet-030e2027b08d24e85" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mmap_customer_owned_ip_on_launch[0m[0m = false [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mmap_public_ip_on_launch[0m[0m         = false [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mowner_id[0m[0m                        = "566083893252" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mtags[0m[0m                            = {
+          [31m-[0m [0m"Name" = "Public-2"
+        } [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mtags_all[0m[0m                        = {
+          [31m-[0m [0m"Name" = "Public-2"
+        } [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mvpc_id[0m[0m                          = "vpc-088ea64a0e552c708" [90m->[0m [0m[90mnull[0m[0m
+    }
+
+[1m  # aws_vpc.main[0m will be [1m[31mdestroyed[0m[0m
+[0m  [31m-[0m[0m resource "aws_vpc" "main" {
+      [31m-[0m [0m[1m[0marn[0m[0m                              = "arn:aws:ec2:eu-west-1:566083893252:vpc/vpc-088ea64a0e552c708" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0massign_generated_ipv6_cidr_block[0m[0m = false [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mcidr_block[0m[0m                       = "10.0.0.0/16" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mdefault_network_acl_id[0m[0m           = "acl-09ac3a257cc233ab1" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mdefault_route_table_id[0m[0m           = "rtb-07e7dd79dc5bf1a85" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mdefault_security_group_id[0m[0m        = "sg-0dae6c02d7a3d6ed3" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mdhcp_options_id[0m[0m                  = "dopt-0cd96394720674e66" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0menable_classiclink[0m[0m               = false [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0menable_classiclink_dns_support[0m[0m   = false [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0menable_dns_hostnames[0m[0m             = false [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0menable_dns_support[0m[0m               = true [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mid[0m[0m                               = "vpc-088ea64a0e552c708" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0minstance_tenancy[0m[0m                 = "default" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mmain_route_table_id[0m[0m              = "rtb-07e7dd79dc5bf1a85" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mowner_id[0m[0m                         = "566083893252" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mtags[0m[0m                             = {
+          [31m-[0m [0m"Name" = "Terraform_Labs"
+        } [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mtags_all[0m[0m                         = {
+          [31m-[0m [0m"Name" = "Terraform_Labs"
+        } [90m->[0m [0m[90mnull[0m[0m
+    }
+
+[0m[1mPlan:[0m 0 to add, 0 to change, 19 to destroy.
+[0m[0m[1m
+Do you really want to destroy all resources?[0m
+  Terraform will destroy all your managed infrastructure, as shown above.
+  There is no undo. Only 'yes' will be accepted to confirm.
+
+  [1mEnter a value:[0m [0m
+[0m[1maws_route_table_association.a_public2: Destroying... [id=rtbassoc-07a44bb9504ece759][0m[0m
+[0m[1maws_route_table_association.a_private3: Destroying... [id=rtbassoc-04b4de496fcc673b2][0m[0m
+[0m[1maws_route_table_association.a_private1: Destroying... [id=rtbassoc-03a2bfe07a24abcd2][0m[0m
+[0m[1maws_route_table_association.a_private4: Destroying... [id=rtbassoc-00463a91101ec0ebd][0m[0m
+[0m[1maws_route_table_association.a_private2: Destroying... [id=rtbassoc-00f7d24a1197fe32e][0m[0m
+[0m[1maws_route_table_association.a_public1: Destroying... [id=rtbassoc-070e3c14711fea70b][0m[0m
+[0m[1maws_route_table_association.a_public1: Destruction complete after 0s[0m
+[0m[1maws_route_table_association.a_private1: Destruction complete after 0s[0m
+[0m[1maws_subnet.private_1: Destroying... [id=subnet-0bf0f1ae11e5fe8e7][0m[0m
+[0m[1maws_route_table_association.a_private2: Destruction complete after 0s[0m
+[0m[1maws_subnet.private_2: Destroying... [id=subnet-0562257e8f42c1bbb][0m[0m
+[0m[1maws_route_table_association.a_private3: Destruction complete after 0s[0m
+[0m[1maws_route_table_association.a_public2: Destruction complete after 0s[0m
+[0m[1maws_subnet.private_3: Destroying... [id=subnet-0500d3daa7cd52c96][0m[0m
+[0m[1maws_route_table_association.a_private4: Destruction complete after 0s[0m
+[0m[1maws_route_table.nat_route_table: Destroying... [id=rtb-066ef9c602d390f4b][0m[0m
+[0m[1maws_route_table.public_route_table: Destroying... [id=rtb-0690598ed7ebefd21][0m[0m
+[0m[1maws_subnet.public_2: Destroying... [id=subnet-030e2027b08d24e85][0m[0m
+[0m[1maws_route_table.private_route_table: Destroying... [id=rtb-0f58f5fbb6d2bab18][0m[0m
+[0m[1maws_subnet.private_4: Destroying... [id=subnet-0bb40dc44737d7e07][0m[0m
+[0m[1maws_route_table.private_route_table: Destruction complete after 0s[0m
+[0m[1maws_subnet.private_1: Destruction complete after 0s[0m
+[0m[1maws_route_table.nat_route_table: Destruction complete after 0s[0m
+[0m[1maws_subnet.private_2: Destruction complete after 0s[0m
+[0m[1maws_nat_gateway.ngw: Destroying... [id=nat-0060a7786d58c7fb5][0m[0m
+[0m[1maws_subnet.public_2: Destruction complete after 0s[0m
+[0m[1maws_subnet.private_4: Destruction complete after 0s[0m
+[0m[1maws_subnet.private_3: Destruction complete after 0s[0m
+[0m[1maws_route_table.public_route_table: Destruction complete after 1s[0m
+[0m[1maws_internet_gateway.igw: Destroying... [id=igw-046674e7c0b5f5f93][0m[0m
+[0m[1maws_nat_gateway.ngw: Still destroying... [id=nat-0060a7786d58c7fb5, 10s elapsed][0m[0m
+[0m[1maws_internet_gateway.igw: Still destroying... [id=igw-046674e7c0b5f5f93, 10s elapsed][0m[0m
+[0m[1maws_nat_gateway.ngw: Still destroying... [id=nat-0060a7786d58c7fb5, 20s elapsed][0m[0m
+[0m[1maws_internet_gateway.igw: Still destroying... [id=igw-046674e7c0b5f5f93, 20s elapsed][0m[0m
+[0m[1maws_nat_gateway.ngw: Still destroying... [id=nat-0060a7786d58c7fb5, 30s elapsed][0m[0m
+[0m[1maws_internet_gateway.igw: Still destroying... [id=igw-046674e7c0b5f5f93, 30s elapsed][0m[0m
+[0m[1maws_nat_gateway.ngw: Still destroying... [id=nat-0060a7786d58c7fb5, 40s elapsed][0m[0m
+[0m[1maws_internet_gateway.igw: Still destroying... [id=igw-046674e7c0b5f5f93, 40s elapsed][0m[0m
+[0m[1maws_nat_gateway.ngw: Still destroying... [id=nat-0060a7786d58c7fb5, 50s elapsed][0m[0m
+[0m[1maws_internet_gateway.igw: Still destroying... [id=igw-046674e7c0b5f5f93, 50s elapsed][0m[0m
+[0m[1maws_nat_gateway.ngw: Destruction complete after 51s[0m
+[0m[1maws_eip.lb: Destroying... [id=eipalloc-02f1296622ea66504][0m[0m
+[0m[1maws_subnet.public_1: Destroying... [id=subnet-0e9ff122f7c7bef55][0m[0m
+[0m[1maws_subnet.public_1: Destruction complete after 0s[0m
+[0m[1maws_eip.lb: Destruction complete after 0s[0m
+[0m[1maws_internet_gateway.igw: Destruction complete after 57s[0m
+[0m[1maws_vpc.main: Destroying... [id=vpc-088ea64a0e552c708][0m[0m
+[0m[1maws_vpc.main: Destruction complete after 0s[0m
+[0m[1m[32m
+Destroy complete! Resources: 19 destroyed.
+[0m
