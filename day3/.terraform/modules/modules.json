@@ -1,1 +1,0 @@
-{"Modules":[{"Key":"module_test","Source":"./ec2","Dir":"ec2"},{"Key":"module_vpc","Source":"./vpc","Dir":"vpc"},{"Key":"public1","Source":"./subnets","Dir":"subnets"},{"Key":"rule1","Source":"./sec-group-rule","Dir":"sec-group-rule"},{"Key":"test","Source":"./sec-group","Dir":"sec-group"},{"Key":"","Source":"","Dir":"."}]}
